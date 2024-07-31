@@ -1,0 +1,22 @@
+<div *ngFor=" let product of productList" class="card mb-3 d-flex justify-content-center align-items-center">
+    <h3>{{product.id}}</h3>
+    <h2>{{product.title}}</h2>
+    <p>{{product.description}}</p>
+    <p>{{product.price}}</p>
+    <button class="btn btn-primary" (click)="addToCart(product)">Add to cart</button>
+</div>
+<div>
+    <input type="number" [(ngModel)]="productId" placeholder="Enter product id">
+    <button (click)="getProductById()">Search</button>
+</div>
+<div *ngIf="selectedProduct">
+    <h2>name: {{selectedProduct.title}}</h2>
+    <p>description: {{selectedProduct.description}}</p>
+    <p>price: {{selectedProduct.price}}</p>
+    <img [src]="selectedProduct.image" alt="{{selectedProduct.title}}">
+</div>
+
+<div>
+  <a [routerLink]="['cart']">Ver Carrito</a>
+
+</div>

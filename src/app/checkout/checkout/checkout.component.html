@@ -1,0 +1,10 @@
+<h1>Checkout</h1>
+<div *ngFor="let items of items">
+  <h2>{{items.title}}</h2>
+  <p>${{items.price}}</p>
+</div>
+<div>
+  <button>Complete Order</button>
+  <a [routerLink]="['']">Seguir Comprando</a>
+</div>
+<h1>Si funciona</h1>

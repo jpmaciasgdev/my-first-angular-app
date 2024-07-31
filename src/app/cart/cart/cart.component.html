@@ -1,0 +1,7 @@
+<div *ngFor="let items of items">
+    <h2>{{items.title}}</h2>
+    <p>{{items.price}}</p>
+</div>
+<div>
+  <a [routerLink]="['../checkout']">Checkout</a>
+</div>
